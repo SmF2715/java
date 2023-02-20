@@ -51,15 +51,14 @@ public class Main {
     }
     public static void secondLab02(){
         System.out.println("#2");
-        System.out.print("n = ");
+        System.out.print("Введите число столбцов и строк: ");
         int n = scanner.nextInt();
-        System.out.print("m = ");
-        int m = scanner.nextInt();
+        int m = n;
         int zero_Counter = 0;
         int[][] matrix = new int[n][m];
         for (int y = 0; y < n; y ++){
             for (int x = 0; x < m; x++){
-                matrix[x][y] =random.nextInt(-10,10);
+                matrix[x][y] = random.nextInt(-10,10);
                 System.out.print(matrix[x][y] + " ");
             }
             System.out.println("\n");
@@ -68,17 +67,18 @@ public class Main {
             for(int x = 0; x < n; x++){
                 if (matrix[y][x] == 0) {
                     zero_Counter++;
-                    try(FileWriter writer = new FileWriter("secondLab02", false)){
-                        writer.write("Количество столбцов, в которых есть хотя бы 1 нулевой элемент равно " + zero_Counter);
-                    }
-                    catch (IOException e) {
-                        System.out.println(e.getMessage());
-                    }
                     break;
                 }
             }
         }
-        try (FileReader reader = new FileReader("secondLab02")){
+
+        try(FileWriter writer = new FileWriter("secondLab02.txt", false)){
+            writer.write("Количество столбцов, в которых есть хотя бы 1 нулевой элемент равно " + zero_Counter);
+        }
+        catch (IOException e) {
+            System.out.println(e.getMessage());
+        }
+        try (FileReader reader = new FileReader("secondLab02.txt")){
             int c;
             while((c = reader.read())!= -1){
                 System.out.print((char)c);
@@ -103,10 +103,28 @@ public class Main {
         a107.Print();
         a107.ReceiveBus("From Kamenka",12);
         System.out.println("Номер этого маршрута: " + a107.GetNumber());
+        Bus[] buses = {a82, a107};
+        for (int i = 0; i < buses.length; i++){
+            try(FileWriter writer = new FileWriter("firstLab03.txt", false)){
+                writer.write(buses[i].GetInfo());
+            }
+            catch (IOException ex){
+                System.out.println(ex.getMessage());
+            }
+            try(FileReader reader = new FileReader("firstLab03.txt")){
+                int c;
+                while ((c = reader.read())!= -1){
+                    System.out.print((char)c);
+                }
+            }
+            catch (IOException ex){
+                System.out.println(ex.getMessage());
+            }
+        }
     }
     public static void main(String[] args) {
         System.out.println("Лабораторная работа №7 \nВариант №4");
         lab02();
-        //lab03();
+        lab03();
     }
 }
