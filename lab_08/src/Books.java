@@ -1,6 +1,4 @@
-import java.sql.SQLOutput;
-
-public class Books extends PublishingHouse{
+public class Books extends PublishingHouse implements IClassInfo{
     private String author;
     private String name;
     private int pages;
@@ -63,5 +61,9 @@ public class Books extends PublishingHouse{
     public void PrintInfo() {
         System.out.printf("Автор: %s \nНазвание книги: %s \nСтраниц: %d \nТом: %d",author, name, pages, volumes);
         super.PrintInfo();
+    }
+
+    public String typeOfClass(){
+        return  getClass().toString();
     }
 }

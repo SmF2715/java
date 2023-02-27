@@ -1,4 +1,4 @@
-public class PublishingHouse {
+public class PublishingHouse implements IClassInfo{
 
     private String publisher;
     private int yearOfPublishing;
@@ -30,4 +30,7 @@ public class PublishingHouse {
         System.out.println("\nИздатель: " + getPublisher() + "\nГод издания: " + getYearOfPublishing());
     }
 
+    public String typeOfClass(){
+        return  getClass().toString();
+    }
 }
