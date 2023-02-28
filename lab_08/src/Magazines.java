@@ -1,5 +1,13 @@
 public class Magazines extends Books implements IClassInfo{
     private int number;
+    private int amount = 0;
+
+    {
+        amount++;
+    }
+    public int getAmount() {
+        return amount;
+    }
 
     public int getNumber() {
         return number;
@@ -12,6 +20,7 @@ public class Magazines extends Books implements IClassInfo{
     public Magazines(){
 
     }
+
     public Magazines(int number){
         this.number = number;
     }

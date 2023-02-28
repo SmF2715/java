@@ -18,5 +18,6 @@ public class Main {
         magazines.setNumber(16);
         magazines.PrintInfo();
         System.out.println("Объект "+ magazines.toString() +" является экземпляром класса: " + magazines.typeOfClass());
+        System.out.println("Кол-во журналов: " + magazines.getAmount());
     }
 }
