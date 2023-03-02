@@ -11,7 +11,7 @@ public class Main {
             System.out.println("№ " + i);
             arr[i].PrintInfo();
         }
-
+        /*
         for (int i = 0; i < arr.length; i++) {
             System.out.format("\nЭлемент №%d массива объектов класса WORKER содержит в себе: \nФИО: %s \nДолжность: %s \nКол-во отработанных часов: %d\n", i, arr[i].GetName(), arr[i].GetJobTitle(), arr[i].GetHours());
             arr[i].SetName();
@@ -19,7 +19,7 @@ public class Main {
             arr[i].SetHours();
             System.out.format("\nЭлемент №%d массива объектов класса WORKER содержит в себе: \nФИО: %s \nДолжность: %s \nКол-во отработанных часов: %d\n", i, arr[i].GetName(), arr[i].GetJobTitle(), arr[i].GetHours());
         }
-
+        */
         System.out.print("Введите фамилию: ");
         String inputFamily = scan.next();
         for (int i = 0; i < arr.length; i++){
@@ -29,7 +29,7 @@ public class Main {
         }
 
         WORKER1 bum = new WORKER1("Качан Василий Петрович", "бомж", 0, "Отсутсвует");
-        arr[2] = bum;
+        arr[1] = bum;
         for (int i = 0; i < arr.length; i++) {
             System.out.println("№ " + i);
             arr[i].PrintInfo();
