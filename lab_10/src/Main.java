@@ -8,7 +8,14 @@ public class Main {
 
     public static void main(String[] args) {
         System.out.println("Лабораторная работа №10 \nВариант №4 \n");
-        String text = "";
+        StringUtils test = new StringUtils();
+        test.printText();
+        test.setInputString();
+        test.searchInText();
+        System.out.println(test.wordCounter());
+
+
+        /*String text = "";
         try (FileReader reader = new FileReader("main.txt")){
             int c;
 
@@ -34,7 +41,7 @@ public class Main {
         System.out.println("\nКоличество согласных в тексте: " + consonantsCounter(text));
         System.out.println("\nСамое короткое слово в тексте: " + shortestWord(text));
         System.out.println("\nСамое длинное слово в тексте: " + longestWord(text));
-    }
+   */ }
 
     public static void searchInText(String text, String text_input){
         if(text.indexOf(text_input)!=-1){
