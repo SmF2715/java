@@ -31,15 +31,14 @@ public class StringUtils {
         catch (IOException e){
             System.out.println(e.getMessage());
         }
-        mainString.replaceAll("[\r\n]", " ");
-        return  mainString;
+        return mainString.replaceAll("[\r\n]", " ");
     }
 
     public static void writeInFile(){
         try(FileWriter fileWriter = new FileWriter("main.txt", false)){
             System.out.println("Введите текст для записи в файл");
             String inputInFile = scanner.nextLine();
-            fileWriter.append(" " + inputInFile + " ");
+            fileWriter.append(" ".concat(inputInFile + " "));
             fileWriter.flush();
         }
         catch (IOException e){
@@ -52,7 +51,7 @@ public class StringUtils {
     }
 
     public static void searchInText(){
-        if(readFromFile().indexOf(inputString)!=-1){
+        if(readFromFile().contains(inputString)){
             System.out.printf("Подстрока \"%s\" присутствует в данном тексте \n", inputString);
         }
         else{
@@ -98,10 +97,6 @@ public class StringUtils {
             }
         }
         return counter;
-    }
-
-    public static String formatedString(){
-        return readFromFile().replaceAll("[\r\n]"," ");
     }
 
     public static String shortestWord(){
