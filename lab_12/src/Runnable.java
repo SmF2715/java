@@ -1,3 +1,4 @@
- interface Runnable {
+ interface
+ Runnable {
     void run();
 }
