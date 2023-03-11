@@ -16,7 +16,7 @@ public class Main {
         }
         System.out.println("Main thread finished...");*/
 
-/*
+        /*
         System.out.println("Main thread started");
         System.out.println("Main thread finished");
 */
@@ -42,6 +42,7 @@ public class Main {
         catch (InterruptedException e){
             System.out.println("Thread was interrupted\n");
         }*/
+        /*
 
         CommonResource commonResource = new CommonResource();
         for(int i = 1; i < 6; i++){
@@ -49,6 +50,8 @@ public class Main {
             t.setName("Thread " + i);
             t.start();
         }
+*/
+
 
     }
 }
