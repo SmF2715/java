@@ -1,4 +1,5 @@
-public class TrainThreads2 {
+public class
+TrainThreads2 {
     public static void main(String[] args){
         int[] AI = {2,3,4,81, 8,-1};
         ThreadMinMax t1 = new ThreadMinMax(AI);
