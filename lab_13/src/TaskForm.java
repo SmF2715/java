@@ -9,7 +9,7 @@ public class TaskForm {
         generateStringButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent actionEvent) {
-                String finish = "Finished text: \nName: " + textFieldNSS.getText() + "\nAge: " + textFieldAge.getText() + "\nNumber: " + textFieldPnobeNumber.getText();
+                String finish = "Finished text: \nSurname, Name and Second Name: " + textFieldNSS.getText() + "\nAge: " + textFieldAge.getText() + "\nPhone number: " + textFieldPnobeNumber.getText();
                 textArea1.setText(finish);
             }
         });

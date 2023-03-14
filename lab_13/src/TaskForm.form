@@ -59,7 +59,7 @@
         </constraints>
         <properties>
           <font size="20" style="1"/>
-          <text value="Name, Second name, Surname"/>
+          <text value="Surname, Name, Second Name"/>
         </properties>
       </component>
       <component id="9e14e" class="javax.swing.JButton" binding="generateStringButton" default-binding="true">
@@ -78,7 +78,7 @@
           </grid>
         </constraints>
         <properties>
-          <font size="36" style="1"/>
+          <font size="25" style="1"/>
         </properties>
       </component>
     </children>
