@@ -4,8 +4,8 @@ public class Lab12Tasks {
 
     public static void task1(){
         System.out.println("Задание №1\n");
-        String inputString = new Scanner(System.in).nextLine();
-
+        SearchResult test = new SearchResult("AI0.txt", "testThread");
+        test.start();
     }
 
     public static void main(String[] args){
